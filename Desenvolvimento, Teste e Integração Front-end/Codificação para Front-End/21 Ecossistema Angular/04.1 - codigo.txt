@@ -1,0 +1,34 @@
+04.1 - codigo.txt
+---
+
+1 - Em produto.ts
+conteúdo da classe produto:
+
+nome = 'Produto Exemplo';
+preco = 149.99;
+
+
+2 - Em produto.html
+inserir a div:
+
+<div class="produto">
+  <h2>{{ nome }}</h2>
+  <p>Preço: R$ {{ preco }}</p>
+</div>
+
+
+3 - Em app.ts
+inserir o import:
+
+import { Produto } from './components/produto/produto';
+
+no @Component, inserir import de Produto e remover a rota:
+imports: [Produto], // remove RouterOutlet, 
+
+
+4 - Em app.html
+APAGAR TODO O CONTEÚDO ORIGINAL DO ARQUIVO,
+Inserir apenas:
+
+<h1>Minha Loja</h1>
+<app-produto></app-produto>
