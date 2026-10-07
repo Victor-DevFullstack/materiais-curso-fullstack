@@ -1,0 +1,808 @@
+SCRIPT PARA BANCO DE DADOS 'minhaLoja' MONGODB
+
+use minhaLoja
+--------------------------------
+--------------------------------
+--------------------------------
+
+
+db.usuarios.insertMany([
+  {
+    nome: 'Rodrigo',
+    idade: 29,
+    email: 'rodrigo@email.com',
+    endereco: {
+      rua: 'Rua Conde de Bonfim',
+      numero: '450',
+      complemento: 'Ap 402',
+      bairro: 'Tijuca',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Beatriz',
+    idade: 22,
+    email: 'beatriz@email.com',
+    endereco: {
+      rua: 'Rua Dias da Cruz',
+      numero: '180',
+      complemento: 'Bloco 2 Ap 101',
+      bairro: 'Méier',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Matheus',
+    idade: 24,
+    email: 'matheus@email.com',
+    interesses: ['futebol', 'praia', 'games']
+  },
+  {
+    nome: 'Mariana',
+    idade: 31,
+    email: 'mariana@email.com',
+    endereco: {
+      rua: 'Avenida Nossa Senhora de Copacabana',
+      numero: '760',
+      complemento: 'Ap 805',
+      bairro: 'Copacabana',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Gabriel',
+    idade: 18,
+    email: 'gabriel@email.com'
+  },
+  {
+    nome: 'Camila',
+    idade: 27,
+    email: 'camila@email.com',
+    endereco: {
+      rua: 'Rua Voluntários da Pátria',
+      numero: '320',
+      complemento: 'Ap 603',
+      bairro: 'Botafogo',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Lucas',
+    idade: 26,
+    email: 'lucas@email.com',
+    interesses: ['musica', 'ti', 'corrida']
+  },
+  {
+    nome: 'Juliana',
+    idade: 35,
+    email: 'juliana@email.com',
+    endereco: {
+      rua: 'Estrada do Portela',
+      numero: '99',
+      complemento: 'Sala 310',
+      bairro: 'Madureira',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Felipe',
+    idade: 38,
+    email: 'felipe@email.com'
+  },
+  {
+    nome: 'Bruna',
+    idade: 23,
+    email: 'bruna@email.com',
+    endereco: {
+      rua: 'Avenida das Américas',
+      numero: '4200',
+      complemento: 'Bloco 3 Ap 704',
+      bairro: 'Barra da Tijuca',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Vinicius',
+    idade: 30,
+    email: 'vinicius@email.com',
+    habilidades: [
+      { idioma: 'Inglês', fluencia: 'Avançado' },
+      { linguagem: 'JavaScript', nivel: 'Pleno' }
+    ]
+  },
+  {
+    nome: 'Fernanda',
+    idade: 41,
+    email: 'fernanda@email.com',
+    endereco: {
+      rua: 'Rua Jardim Botânico',
+      numero: '674',
+      complemento: 'Casa 1',
+      bairro: 'Jardim Botânico',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Eduardo',
+    idade: 50,
+    email: 'eduardo@email.com'
+  },
+  {
+    nome: 'Priscila',
+    idade: 34,
+    email: 'priscila@email.com',
+    endereco: {
+      rua: 'Rua Uranos',
+      numero: '1105',
+      complemento: 'Ap 202',
+      bairro: 'Olaria',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Marcelo',
+    idade: 46,
+    email: 'marcelo@email.com'
+  },
+  {
+    nome: 'Renata',
+    idade: 39,
+    email: 'renata@email.com',
+    endereco: {
+      rua: 'Rua Santa Alexandrina',
+      numero: '512',
+      complemento: 'fundos',
+      bairro: 'Rio Comprido',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Diego',
+    idade: 28,
+    email: 'diego@email.com',
+    interesses: ['carnaval', 'cerveja artesanal', 'futebol']
+  },
+  {
+    nome: 'Patricia',
+    idade: 47,
+    email: 'patricia@email.com',
+    endereco: {
+      rua: 'Avenida Mem de Sá',
+      numero: '88',
+      complemento: 'Sobrado',
+      bairro: 'Lapa',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Leandro',
+    idade: 32,
+    email: 'leandro@email.com'
+  },
+  {
+    nome: 'Vanessa',
+    idade: 29,
+    email: 'vanessa@email.com',
+    endereco: {
+      rua: 'Rua Clarimundo de Melo',
+      numero: '215',
+      complemento: 'Ap 104',
+      bairro: 'Encantado',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Marcio',
+    idade: 55,
+    email: 'marcio@email.com'
+  },
+  {
+    nome: 'Tatiana',
+    idade: 36,
+    email: 'tatiana@email.com',
+    endereco: {
+      rua: 'Rua Visconde de Pirajá',
+      numero: '540',
+      complemento: 'Ap 901',
+      bairro: 'Ipanema',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Guilherme',
+    idade: 21,
+    email: 'guilherme@email.com',
+    interesses: ['skate', 'musica', 'design']
+  },
+  {
+    nome: 'Sabrina',
+    idade: 26,
+    email: 'sabrina@email.com',
+    endereco: {
+      rua: 'Estrada do Tindiba',
+      numero: '1430',
+      complemento: 'Bloco 1 Ap 302',
+      bairro: 'Taquara',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Bruno',
+    idade: 33,
+    email: 'bruno@email.com'
+  },
+  {
+    nome: 'Daniela',
+    idade: 42,
+    email: 'daniela@email.com',
+    endereco: {
+      rua: 'Rua Hadock Lobo',
+      numero: '200',
+      complemento: 'Ap 503',
+      bairro: 'Estácio',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Vitor',
+    idade: 20,
+    email: 'vitor@email.com'
+  },
+  {
+    nome: 'Larissa',
+    idade: 25,
+    email: 'larissa@email.com',
+    endereco: {
+      rua: 'Estrada dos Três Rios',
+      numero: '890',
+      complemento: 'Ap 401',
+      bairro: 'Freguesia',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Claudio',
+    idade: 61,
+    email: 'claudio@email.com'
+  },
+  {
+    nome: 'Leticia',
+    idade: 28,
+    email: 'leticia@email.com',
+    endereco: {
+      rua: 'Rua Coronel Tamarindo',
+      numero: '1240',
+      complemento: 'Casa',
+      bairro: 'Guaratiba',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'João',
+    idade: 25,
+    email: 'joao@email.com'
+  },
+  {
+    nome: 'Carla',
+    idade: 33,
+    email: 'carla@email.com'
+  },
+  {
+    nome: 'Rafael',
+    idade: 16,
+    email: 'rafa@email.com'
+  },
+  {
+    nome: 'Gabriela',
+    idade: 17,
+    email: 'gabi@email.com'
+  },
+  {
+    nome: 'Jorge',
+    idade: 67,
+    email: 'jorge@email.com'
+  },
+  {
+    nome: 'Luciana',
+    idade: 19,
+    email: 'luci@email.com'
+  },
+  {
+    nome: 'Luis',
+    idade: 44,
+    email: 'luis@email.com'
+  },
+  {
+    nome: 'Ana',
+    idade: 20,
+    email: 'ana@email.com'
+  },
+  {
+    nome: 'Carlos',
+    idade: 30,
+    email: 'carlos@email.com'
+  },
+  {
+    nome: 'Emerson',
+    idade: 48,
+    email: 'emerson@email.com'
+  },
+  {
+    nome: 'Janaina',
+    idade: 33,
+    email: 'janaina@email.com'
+  },
+  {
+    nome: 'Jessica',
+    idade: 30,
+    email: 'jessica@email.com'
+  },
+  {
+    nome: 'Aline',
+    idade: 25,
+    email: 'aline@email.com'
+  },
+  {
+    nome: 'Andrea',
+    idade: 45,
+    email: 'andrea@email.com'
+  },
+  {
+    nome: 'Eliane',
+    idade: 40,
+    email: 'eliane@email.com'
+  },
+  {
+    nome: 'Thiago',
+    idade: 19,
+    email: 'thiago@email.com'
+  },
+  {
+    nome: 'Leonardo',
+    idade: 23,
+    email: 'leonardo@email.com'
+  },
+  {
+    nome: 'Alex',
+    idade: 44,
+    email: 'alex@email.com',
+    endereco: {
+      rua: 'Rua Adalberto José',
+      numero: '13b',
+      complemento: 'fundos',
+      bairro: 'Bangu',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Jonathan',
+    idade: 32,
+    email: 'jonathan@email.com',
+    endereco: {
+      rua: 'Raul Azevedo',
+      numero: '70',
+      complemento: 'Ap 303',
+      bairro: 'Jabour',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'José',
+    idade: 21,
+    email: 'jose@email.com',
+    endereco: {
+      rua: 'Romero Brito',
+      numero: '303',
+      complemento: 'Casa 2',
+      bairro: 'Realengo',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ'
+    }
+  },
+  {
+    nome: 'Fabiana',
+    idade: 53,
+    email: 'fabiana@email.com',
+    interesses: [ 'musica', 'esportes', 'ti', 'gastronomia' ],
+    habilidades: [
+      { idioma: 'Inglês', fluencia: 'Intermediário' },
+      { idioma: 'Espanhol', fluencia: 'Básico' },
+      { linguagem: 'Java', nivel: 'Básico' },
+      { linguagem: 'Python', nivel: 'Avancado' }
+    ]
+  }
+]);
+
+
+
+------------------------
+------------------------
+------------------------
+
+
+db.produtos.insertMany([
+  {
+    nome: 'Monitor 27 Polegadas IPS 144Hz',
+    categoria: 'Monitores',
+    preco: 1299.9,
+    estoque: 12,
+    disponivel: true
+  },
+  {
+    nome: 'Headset Gamer 7.1',
+    categoria: 'Áudio',
+    preco: 349.9,
+    estoque: 25,
+    disponivel: true
+  },
+  {
+    nome: 'Cadeira Ergonômica de Escritório',
+    categoria: 'Móveis',
+    preco: 899.0,
+    estoque: 8,
+    disponivel: true
+  },
+  {
+    nome: 'SSD NVMe M.2 1TB',
+    categoria: 'Armazenamento',
+    preco: 429.9,
+    estoque: 40,
+    disponivel: true
+  },
+  {
+    nome: 'Webcam Full HD 1080p',
+    categoria: 'Periféricos',
+    preco: 189.9,
+    estoque: 0,
+    disponivel: false
+  },
+  {
+    nome: 'Roteador Wi-Fi 6 Gigabit',
+    categoria: 'Redes',
+    preco: 399.0,
+    estoque: 18,
+    disponivel: true
+  },
+  {
+    nome: 'Smartphone Galaxy A54',
+    categoria: 'Eletrônicos',
+    preco: 1799.0,
+    estoque: 10,
+    disponivel: true
+  },
+  {
+    nome: 'Mousepad Gamer Extra Grande',
+    categoria: 'Acessórios',
+    preco: 59.9,
+    estoque: 70,
+    disponivel: true
+  },
+  {
+    nome: 'Memória RAM DDR4 16GB 3200MHz',
+    categoria: 'Hardware',
+    preco: 249.9,
+    estoque: 30,
+    disponivel: true
+  },
+  {
+    nome: 'Caixa de Som Bluetooth Portátil',
+    categoria: 'Áudio',
+    preco: 199.9,
+    estoque: 0,
+    disponivel: false
+  },
+  {
+    nome: 'Placa de Vídeo RTX 4060',
+    categoria: 'Hardware',
+    preco: 2299.0,
+    estoque: 6,
+    disponivel: true
+  },
+  {
+    nome: 'Fonte ATX 650W 80 Plus Bronze',
+    categoria: 'Hardware',
+    preco: 389.9,
+    estoque: 14,
+    disponivel: true
+  },
+  {
+    nome: 'Hub USB-C 7 em 1',
+    categoria: 'Acessórios',
+    preco: 149.9,
+    estoque: 22,
+    disponivel: true
+  },
+  {
+    nome: 'Suporte Articulado para Monitor',
+    categoria: 'Acessórios',
+    preco: 169.0,
+    estoque: 19,
+    disponivel: true
+  },
+  {
+    nome: 'Mesa Digitalizadora',
+    categoria: 'Periféricos',
+    preco: 319.9,
+    estoque: 0,
+    disponivel: false
+  },
+  {
+    nome: 'Microfone Condensador USB',
+    categoria: 'Áudio',
+    preco: 279.0,
+    estoque: 15,
+    disponivel: true
+  },
+  {
+    nome: 'Nobreak 1200VA Bivolt',
+    categoria: 'Energia',
+    preco: 749.9,
+    estoque: 5,
+    disponivel: true
+  },
+  {
+    nome: 'Gabinete Gamer com 3 Fans RGB',
+    categoria: 'Hardware',
+    preco: 329.9,
+    estoque: 9,
+    disponivel: true
+  },
+  {
+    nome: 'HD Externo Portátil 2TB',
+    categoria: 'Armazenamento',
+    preco: 399.9,
+    estoque: 16,
+    disponivel: true
+  },
+  {
+    nome: 'Carregador por Indução Sem Fio',
+    categoria: 'Acessórios',
+    preco: 119.9,
+    estoque: 0,
+    disponivel: false
+  },
+  {
+    nome: 'Notebook Dell',
+    categoria: 'Eletrônicos',
+    preco: 3599.9,
+    estoque: 15,
+    disponivel: true
+  },
+  {
+    nome: 'Mouse Sem Fio',
+    categoria: 'Periféricos',
+    preco: 89.9,
+    estoque: 50,
+    disponivel: true
+  },
+  {
+    nome: 'Teclado Mecânico',
+    categoria: 'Periféricos',
+    preco: 299,
+    estoque: 0,
+    disponivel: false
+  }
+]);
+
+
+
+------------------------
+------------------------
+------------------------
+
+
+db.pedidos.insertMany([
+  {
+    numeroPedido: 'PED-002',
+    data: ISODate('2024-06-11T14:30:00.000Z'),
+    cliente: { nome: 'Alex', email: 'alex@email.com' },
+    itens: [
+      { produto: 'Monitor 27 Polegadas IPS 144Hz', qtd: 1, preco: 1299.9 },
+      { produto: 'Suporte Articulado para Monitor', qtd: 1, preco: 169.0 }
+    ],
+    total: 1468.9,
+    entrega: {
+      rua: 'Rua Adalberto José',
+      numero: '13b',
+      complemento: 'fundos',
+      bairro: 'Bangu',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'entregue'
+    }
+  },
+  {
+    numeroPedido: 'PED-003',
+    data: ISODate('2024-06-12T09:15:00.000Z'),
+    cliente: { nome: 'Jonathan', email: 'jonathan@email.com' },
+    itens: [
+      { produto: 'Placa de Vídeo RTX 4060', qtd: 1, preco: 2299.0 },
+      { produto: 'Fonte ATX 650W 80 Plus Bronze', qtd: 1, preco: 389.9 },
+      { produto: 'Gabinete Gamer com 3 Fans RGB', qtd: 1, preco: 329.9 }
+    ],
+    total: 3018.8,
+    entrega: {
+      rua: 'Raul Azevedo',
+      numero: '70',
+      complemento: 'Ap 303',
+      bairro: 'Jabour',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'enviado'
+    }
+  },
+  {
+    numeroPedido: 'PED-004',
+    data: ISODate('2024-06-13T18:20:00.000Z'),
+    cliente: { nome: 'Carla', email: 'carla@email.com' },
+    itens: [
+      { produto: 'Cadeira Ergonômica de Escritório', qtd: 1, preco: 899.0 }
+    ],
+    total: 899.0,
+    entrega: {
+      rua: 'Rua Conde de Bonfim',
+      numero: '537',
+      complemento: 'Ap 101',
+      bairro: 'Tijuca',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'entregue'
+    }
+  },
+  {
+    numeroPedido: 'PED-005',
+    data: ISODate('2024-06-14T11:45:00.000Z'),
+    cliente: { nome: 'Rodrigo', email: 'rodrigo@email.com' },
+    itens: [
+      { produto: 'SSD NVMe M.2 1TB', qtd: 2, preco: 429.9 },
+      { produto: 'Memória RAM DDR4 16GB 3200MHz', qtd: 2, preco: 249.9 }
+    ],
+    total: 1359.6,
+    entrega: {
+      rua: 'Rua Conde de Bonfim',
+      numero: '450',
+      complemento: 'Ap 402',
+      bairro: 'Tijuca',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'pendente'
+    }
+  },
+  {
+    numeroPedido: 'PED-006',
+    data: ISODate('2024-06-15T16:05:00.000Z'),
+    cliente: { nome: 'Beatriz', email: 'beatriz@email.com' },
+    itens: [
+      { produto: 'Smartphone Galaxy A54', qtd: 1, preco: 1799.0 },
+      { produto: 'Mouse Sem Fio', qtd: 1, preco: 89.9 }
+    ],
+    total: 1888.9,
+    entrega: {
+      rua: 'Rua Dias da Cruz',
+      numero: '180',
+      complemento: 'Bloco 2 Ap 101',
+      bairro: 'Méier',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'enviado'
+    }
+  },
+  {
+    numeroPedido: 'PED-007',
+    data: ISODate('2024-06-16T10:10:00.000Z'),
+    cliente: { nome: 'Mariana', email: 'mariana@email.com' },
+    itens: [
+      { produto: 'Headset Gamer 7.1', qtd: 1, preco: 349.9 },
+      { produto: 'Mousepad Gamer Extra Grande', qtd: 1, preco: 59.9 }
+    ],
+    total: 409.8,
+    entrega: {
+      rua: 'Avenida Nossa Senhora de Copacabana',
+      numero: '760',
+      complemento: 'Ap 805',
+      bairro: 'Copacabana',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'entregue'
+    }
+  },
+  {
+    numeroPedido: 'PED-008',
+    data: ISODate('2024-06-17T13:40:00.000Z'),
+    cliente: { nome: 'Camila', email: 'camila@email.com' },
+    itens: [
+      { produto: 'Hub USB-C 7 em 1', qtd: 1, preco: 149.9 },
+      { produto: 'HD Externo Portátil 2TB', qtd: 1, preco: 399.9 }
+    ],
+    total: 549.8,
+    entrega: {
+      rua: 'Rua Voluntários da Pátria',
+      numero: '320',
+      complemento: 'Ap 603',
+      bairro: 'Botafogo',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'pendente'
+    }
+  },
+  {
+    numeroPedido: 'PED-009',
+    data: ISODate('2024-06-18T15:25:00.000Z'),
+    cliente: { nome: 'Bruna', email: 'bruna@email.com' },
+    itens: [
+      { produto: 'Roteador Wi-Fi 6 Gigabit', qtd: 1, preco: 399.0 },
+      { produto: 'Nobreak 1200VA Bivolt', qtd: 1, preco: 749.9 }
+    ],
+    total: 1148.9,
+    entrega: {
+      rua: 'Avenida das Américas',
+      numero: '4200',
+      complemento: 'Bloco 3 Ap 704',
+      bairro: 'Barra da Tijuca',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'cancelado'
+    }
+  },
+  {
+    numeroPedido: 'PED-010',
+    data: ISODate('2024-06-19T17:50:00.000Z'),
+    cliente: { nome: 'José', email: 'jose@email.com' },
+    itens: [
+      { produto: 'Microfone Condensador USB', qtd: 1, preco: 279.0 },
+      { produto: 'Mouse Sem Fio', qtd: 2, preco: 89.9 }
+    ],
+    total: 458.8,
+    entrega: {
+      rua: 'Romero Brito',
+      numero: '303',
+      complemento: 'Casa 2',
+      bairro: 'Realengo',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'enviado'
+    }
+  },
+  {
+    numeroPedido: 'PED-001',
+    data: ISODate('2024-06-10T00:00:00.000Z'),
+    cliente: { nome: 'João Silva', email: 'joao@email.com' },
+    itens: [
+      { produto: 'Notebook Dell', qtd: 1, preco: 3599.9 },
+      { produto: 'Mouse Sem Fio', qtd: 3, preco: 89.9 }
+    ],
+    total: 3779.7,
+    entrega: {
+      rua: 'Romero Brito',
+      numero: '303',
+      complemento: 'Casa 2',
+      bairro: 'Realengo',
+      cidade: 'Rio de Janeiro',
+      estado: 'RJ',
+      status: 'pendente'
+    }
+  }
+]);
+
+
+
+
+
